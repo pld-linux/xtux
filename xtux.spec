@@ -1,5 +1,4 @@
 Summary:	X11 client server network game featuring opensource mascots
-Summary(es):	X11 client server network game featuring opensource mascots
 Summary(pl):	Klient pod X11 gry klient-serwer z postaciami ¶wiata opensource
 Summary(pt_BR): Jogo cliente-servidor para X11 com mascotes do código aberto
 Name:		xtux
@@ -26,15 +25,11 @@ Players can compete in a multiplayer deathmatch mode (called holywar)
 or play against the computer (cooperative multiplayer supported) in a
 mission against Microsoft.
 
-%description -l es
-XTux Arena is a client server network game for X11 featuring
-opensource mascots, like Linus, RMS, Gnome, KDE and of course tux.
-Players can compete in a multiplayer deathmatch mode (called holywar)
-or play against the computer (cooperative multiplayer supported) in a
-mission against Microsoft.
-
 %description -l pl
-Klient pod X11 gry klient-serwer z postaciami ¶wiata opensource.
+XTux Arena to klient pod X11 gry klient-serwer z postaciami ¶wiata
+opensource, takimi jak Linus, RMS, Gnome, KDE i oczywi¶cie tux. Gracze
+mog± wspó³zawodniczyæ w trybie deathmatch ("¶wiêta wojna") lub graæ
+przeciwko komputerowi (tryb wspó³pracy) w misji przeciwko Microsoft.
 
 %description -l pt_BR
 O Xtux Arena é um jogo em rede cliente-servidor para X11 onde estrelam
