@@ -3,7 +3,7 @@ Summary(pl):	Klient pod X11 gry klient-serwer z postaciami ¶wiata opensource
 Summary(pt_BR):	Jogo cliente-servidor para X11 com mascotes do código aberto
 Name:		xtux
 Version:	20010601
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://ftp1.sourceforge.net/%{name}/%{name}-src-%{version}.tar.gz
