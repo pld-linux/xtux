@@ -1,0 +1,12 @@
+diff -Nur old/src/client/menu.c new/src/client/menu.c
+--- old/src/client/menu.c	2003-03-05 14:54:17.000000000 +0000
++++ new/src/client/menu.c	2004-04-20 16:01:05.000000000 +0000
+@@ -726,7 +726,7 @@
+ 	for( i=0 ; i<3 ; i++ )
+ 	    close(i); /* Close STD-IN, -OUT, -ERR */
+ 
+-	system("./tux_serv -e");
++	system("tux_serv -e");
+ 	/* execlp( "./tux_serv", "-e" );
+ 	   perror("execlp"); */
+ 	exit(-1);
