@@ -6,7 +6,7 @@ Version:	20010601
 Release:	2
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://ftp1.sourceforge.net/%{name}/%{name}-src-%{version}.tar.gz
+Source0:	http://dl.sf.net/xtux/xtux/%{name}-src-%{version}.tar.gz
 # Source0-md5:	609ebca3902761bba636323d310eb091
 Source1:	%{name}.desktop
 Source2:	%{name}.png
@@ -37,7 +37,7 @@ pingüim tux. Os jogadores podem competir em modo mate-ou-morra
 cooperativo suportado) numa missão contra a Microsoft(R).
 
 %prep
-%setup -q -n xtux
+%setup -q -n %{name}
 %patch -p1
 
 %build
@@ -52,7 +52,6 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 cp -rf data/* $RPM_BUILD_ROOT%{_datadir}/xtux
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
