@@ -1,5 +1,7 @@
-Summary:	XTux Arena Tournament
-Summary(pl):	XTux Arena Tournament
+Summary:	X11 client server network game featuring opensource mascots
+Summary(es):	X11 client server network game featuring opensource mascots
+Summary(pl):	Klient pod X11 gry klient-serwer z postaciami ¶wiata opensource
+Summary(pt_BR): Jogo cliente-servidor para X11 com mascotes do código aberto
 Name:		xtux
 Version:	20010601
 Release:	1
@@ -8,6 +10,8 @@ Group:		X11/Applications/Games
 Group(de):	X11/Applikationen/Spiele
 Group(pl):	X11/Aplikacje/Gry
 Source0:	http://ftp1.sourceforge.net/%{name}/%{name}-src-%{version}.tar.gz
+Source1:	%{name}.desktop
+Source2:	%{name}.png
 Patch0:		%{name}-opt.patch
 URL:		http://xtux.sourceforge.net/
 BuildRequires:	XFree86-devel >= 4.0
@@ -16,10 +20,28 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
-XTux Arena Tournament.
+XTux Arena is a client server network game for X11 featuring
+opensource mascots, like Linus, RMS, Gnome, KDE, and of course tux.
+Players can compete in a multiplayer deathmatch mode (called holywar)
+or play against the computer (cooperative multiplayer supported) in a
+mission against Microsoft.
+
+%description -l es
+XTux Arena is a client server network game for X11 featuring
+opensource mascots, like Linus, RMS, Gnome, KDE and of course tux.
+Players can compete in a multiplayer deathmatch mode (called holywar)
+or play against the computer (cooperative multiplayer supported) in a
+mission against Microsoft.
 
 %description -l pl
-XTux Arena Tournament.
+Klient pod X11 gry klient-serwer z postaciami ¶wiata opensource.
+
+%description -l pt_BR
+O Xtux Arena é um jogo em rede cliente-servidor para X11 onde estrelam
+mascotes do código aberto, como Linus, RMS, Gnome, KDE e é claro, o
+pingüim tux. Os jogadores podem competir em modo mate-ou-morra
+(deathmatch), chamado holywar, ou jogar contra o computador (modo
+cooperativo suportado) numa missão contra a Microsoft(R).
 
 %prep
 %setup -q -n xtux
@@ -30,9 +52,12 @@ XTux Arena Tournament.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xtux}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xtux,%{_applnkdir}/Games,%{_pixmapsdir}}
 
 install xtux tux_serv $RPM_BUILD_ROOT%{_bindir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+
 cp -rf data/* $RPM_BUILD_ROOT%{_datadir}/xtux
 
 gzip -9nf AUTHORS CHANGELOG README
@@ -45,3 +70,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/xtux
+%{_applnkdir}/Games/*
+%{_pixmapsdir}/*
