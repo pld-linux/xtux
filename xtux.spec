@@ -3,7 +3,7 @@ Summary(pl):	Klient pod X11 gry klient-serwer z postaciami ¶wiata opensource
 Summary(pt_BR):	Jogo cliente-servidor para X11 com mascotes do código aberto
 Name:		xtux
 Version:	20030306
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/xtux/%{name}-src-%{version}.tar.gz
@@ -11,6 +11,7 @@ Source0:	http://dl.sourceforge.net/xtux/%{name}-src-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-opt.patch
+Patch1:		%{name}-newgame.patch
 URL:		http://xtux.sourceforge.net/
 BuildRequires:	XFree86-devel >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -37,7 +38,8 @@ cooperativo suportado) numa missão contra a Microsoft(R).
 
 %prep
 %setup -q -n %{name}
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} \
