@@ -14,7 +14,6 @@ URL:		http://xtux.sourceforge.net/
 BuildRequires:	XFree86-devel >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 XTux Arena is a client server network game for X11 featuring
