@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=XTux
+Comment=X11 client server network game featuring opensource mascots
+Comment[es]=X11 client server network game featuring opensource mascots
+Comment[pl]=Klient pod X11 gry klient-serwer z postaciami ¶wiata opensource
+Comment[pt_BR=Jogo cliente-servidor para X11 com mascotes do código aberto
+Exec=xtux
+Icon=xtux.png
+Terminal=0
+Type=Application
