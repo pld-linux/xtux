@@ -1,6 +1,6 @@
 Summary:	X11 client server network game featuring opensource mascots
 Summary(pl):	Klient pod X11 gry klient-serwer z postaciami ¶wiata opensource
-Summary(pt_BR): Jogo cliente-servidor para X11 com mascotes do código aberto
+Summary(pt_BR):	Jogo cliente-servidor para X11 com mascotes do código aberto
 Name:		xtux
 Version:	20010601
 Release:	1
