@@ -6,7 +6,7 @@ Version:	20010601
 Release:	2
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://dl.sf.net/xtux/xtux/%{name}-src-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/xtux/%{name}-src-%{version}.tar.gz
 # Source0-md5:	609ebca3902761bba636323d310eb091
 Source1:	%{name}.desktop
 Source2:	%{name}.png
@@ -14,7 +14,6 @@ Patch0:		%{name}-opt.patch
 URL:		http://xtux.sourceforge.net/
 BuildRequires:	XFree86-devel >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 XTux Arena is a client server network game for X11 featuring
@@ -41,7 +40,9 @@ cooperativo suportado) numa missão contra a Microsoft(R).
 %patch -p1
 
 %build
-%{__make} DATADIR=%{_datadir}/xtux OPTFLAGS="%{rpmcflags}"
+%{__make} \
+	DATADIR=%{_datadir}/xtux \
+	OPTFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
