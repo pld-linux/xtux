@@ -1,0 +1,72 @@
+diff -Nur xtux.orig/src/client/Makefile xtux/src/client/Makefile
+--- xtux.orig/src/client/Makefile	Fri Jun  1 11:42:01 2001
++++ xtux/src/client/Makefile	Tue Jul 17 13:37:31 2001
+@@ -22,7 +22,7 @@
+ BINARY = $(TOPLEVEL_PATH)/xtux
+ 
+ # Flags used when compiling
+-CFLAGS = -g -Wall -O2 -DDATADIR=\"$(DATADIR)\"
++CFLAGS = $(OPTFLAGS) -Wall -DDATADIR=\"$(DATADIR)\"
+ 
+ # Paths to header files
+ X11_INC = -I$(X11_PATH)/include
+diff -Nur xtux.orig/src/common/Makefile xtux/src/common/Makefile
+--- xtux.orig/src/common/Makefile	Fri Jun  1 11:20:07 2001
++++ xtux/src/common/Makefile	Tue Jul 17 13:37:45 2001
+@@ -1,7 +1,7 @@
+ # Makefile for stuff that's common between server & client.
+ 
+ CC	= gcc
+-CFLAGS	= -g -Wall -O2 -DDATADIR=\"$(DATADIR)\"
++CFLAGS	= $(OPTFLAGS) -Wall -DDATADIR=\"$(DATADIR)\"
+ AR	= ar
+ RANLIB	= ranlib
+ 
+diff -Nur xtux.orig/src/ggz/client/Makefile xtux/src/ggz/client/Makefile
+--- xtux.orig/src/ggz/client/Makefile	Fri Jun  1 11:21:25 2001
++++ xtux/src/ggz/client/Makefile	Tue Jul 17 13:38:19 2001
+@@ -98,7 +98,7 @@
+ libggz_a_LIBADD = 
+ libggz_a_OBJECTS =  ggz.o
+ AR = ar
+-CFLAGS = -g -O2
++CFLAGS = $(OPTFLAGS)
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+diff -Nur xtux.orig/src/ggz/easysock/Makefile xtux/src/ggz/easysock/Makefile
+--- xtux.orig/src/ggz/easysock/Makefile	Fri Jun  1 11:21:23 2001
++++ xtux/src/ggz/easysock/Makefile	Tue Jul 17 13:38:31 2001
+@@ -98,7 +98,7 @@
+ libeasysock_a_LIBADD = 
+ libeasysock_a_OBJECTS =  easysock.o
+ AR = ar
+-CFLAGS = -g -O2
++CFLAGS = $(OPTFLAGS)
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+diff -Nur xtux.orig/src/ggz/server/Makefile xtux/src/ggz/server/Makefile
+--- xtux.orig/src/ggz/server/Makefile	Fri Jun  1 11:21:25 2001
++++ xtux/src/ggz/server/Makefile	Tue Jul 17 13:38:42 2001
+@@ -100,7 +100,7 @@
+ libggzd_a_LIBADD = 
+ libggzd_a_OBJECTS =  ggz.o
+ AR = ar
+-CFLAGS = -g -O2
++CFLAGS = $(OPTFLAGS)
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+diff -Nur xtux.orig/src/server/Makefile xtux/src/server/Makefile
+--- xtux.orig/src/server/Makefile	Fri Jun  1 11:42:40 2001
++++ xtux/src/server/Makefile	Tue Jul 17 13:38:00 2001
+@@ -18,7 +18,7 @@
+ BINARY = $(TOPLEVEL_PATH)/tux_serv
+ 
+ # Flags used when compiling
+-CFLAGS = -g -Wall -O2 -DDATADIR=\"$(DATADIR)\"
++CFLAGS = $(OPTFLAGS) -Wall -DDATADIR=\"$(DATADIR)\"
+ 
+ # Paths to header files
+ COMMON_INC = -I$(COMMON_PATH)
