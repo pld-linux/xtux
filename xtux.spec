@@ -53,14 +53,13 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 cp -rf data/* $RPM_BUILD_ROOT%{_datadir}/xtux
 
-gzip -9nf AUTHORS CHANGELOG README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS CHANGELOG README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/xtux
 %{_applnkdir}/Games/*
