@@ -46,10 +46,10 @@ cooperativo suportado) numa missão contra a Microsoft(R).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xtux,%{_applnkdir}/Games,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xtux,%{_desktopdir},%{_pixmapsdir}}
 
 install xtux tux_serv $RPM_BUILD_ROOT%{_bindir}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 cp -rf data/* $RPM_BUILD_ROOT%{_datadir}/xtux
@@ -62,5 +62,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS CHANGELOG README README.GGZ
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/xtux
-%{_applnkdir}/Games/*
+%{_desktopdir}/*
 %{_pixmapsdir}/*
