@@ -4,7 +4,7 @@ Summary(pt_BR):	Jogo cliente-servidor para X11 com mascotes do código aberto
 Name:		xtux
 Version:	20030306
 Release:	4
-License:	GPL
+License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/xtux/%{name}-src-%{version}.tar.gz
 # Source0-md5:	6ca5d3b48c30411d1a64b4316d5cf6a9
